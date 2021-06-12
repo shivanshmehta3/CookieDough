@@ -1,0 +1,11 @@
+.input-field {
+    display: flex;
+    width: 89%;
+    padding: 10pt;
+    border: none;
+}
+
+.input-field:focus{
+    outline: none;
+}
+    

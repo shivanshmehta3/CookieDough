@@ -1,0 +1,25 @@
+.card-title{
+    @include cursive-font;
+    &::first-letter{
+        text-transform: uppercase;
+    }
+}
+
+.card-text{
+    font-size: 0.90rem;
+    text-transform: lowercase;
+    &::first-letter{
+        text-transform: uppercase;
+    }
+}
+
+.card{
+    max-width: 18rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.card-footer{
+    background: white;
+}

@@ -1,0 +1,11 @@
+.button-style{
+    background-color: white;
+    height: 25pt;
+    border: 1pt solid black;
+    border-radius: 3pt;
+}
+
+.button-style:hover{
+    background-color:navajowhite;
+    cursor: pointer;
+}

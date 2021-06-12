@@ -1,0 +1,14 @@
+.div-add-button{
+    bottom: 25pt;
+    right: 25pt;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+    svg{
+        fill: $dark;
+        transition: 1.15s, ease-in-out fill;
+    }
+    svg:hover{
+        fill: white;
+    }
+}

@@ -1,0 +1,87 @@
+:root{
+    --width-height: 50pt;
+    --margin: calc(-1 * calc(var(--width-height)/2));
+    --loader-top-dist: 50%;
+}
+
+
+.div-loader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+}
+
+.loader-image{
+    position: fixed;
+    left: 50%;
+    margin-left: var(--margin);;
+    margin-top: var(--margin);;
+    animation: bounce 1s infinite, rotate 1s linear infinite;
+    width: var(--width-height);
+}
+
+.loader-shadow-image{
+    position: fixed;
+    left: 50%;
+    top: calc(var(--loader-top-dist) + 30pt);
+    margin-left: var(--margin);
+    margin-top: var(--margin);
+    animation: shadow 1s linear infinite;
+    width: var(--width-height);
+    height: var(--width-height);
+}
+
+@keyframes bounce{
+    0% {
+        top: var(--loader-top-dist);
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        top: calc(var(--loader-top-dist) - 30pt);
+        transform: rotate(180deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        top: var(--loader-top-dist);
+        transform: rotate(360deg);
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes rotate{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shadow{
+    0% {
+        width: var(--width-height);
+        height: var(--width-height);
+        margin-left: var(--margin);
+        margin-top: var(--margin);
+        animation-timing-function: ease-out;
+        opacity: 0.5;
+    }
+    50% {
+        width: calc(var(--width-height)/5);
+        height: calc(var(--width-height)/5);
+        margin-left: calc(var(--margin)/5);
+        margin-top: calc(var(--margin)/5);
+        animation-timing-function: ease-in;
+        opacity: 0.1;
+    }
+    100% {
+        width: var(--width-height);
+        height: var(--width-height);
+        margin-left: var(--margin);
+        margin-top: var(--margin);
+        animation-timing-function: ease-out;
+        opacity: 0.5;
+    }
+}

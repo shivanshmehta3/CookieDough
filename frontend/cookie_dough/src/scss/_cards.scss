@@ -1,0 +1,17 @@
+$topHeight: () !default;
+$topHeight: map-merge((
+    56: 56px,
+    112: 112px
+),$topHeight);
+$propertyName: 'topH';
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint){
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        @each $size, $height in $topHeight {
+            .#{$propertyName}#{$infix}-#{$size}{
+                top: $height !important;
+            }
+        }
+    }
+}
+

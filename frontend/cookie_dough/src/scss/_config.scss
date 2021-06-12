@@ -1,0 +1,19 @@
+$light: #fffacd;
+$dark: #865000;
+$primary: lighten($dark, 10%);
+$component-active-bg: $dark;
+@mixin cursive-font {
+    font-family: Charmonman, Apple Chancery, cursive;
+    // font-style: italic;
+    font-weight: bold;
+}
+
+html body,#root, #root>div{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-padding-top: 112px;
+}

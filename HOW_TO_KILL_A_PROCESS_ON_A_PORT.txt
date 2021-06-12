@@ -1,0 +1,2 @@
+netstat -ano | findstr :3001
+taskkill /PID 5104 /F
